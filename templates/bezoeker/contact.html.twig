@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <h4>
+                            <a class="nav-link m-5 border-bottom border-dark border-2" href="{{ path('home') }}">Home</a>
+                        </h4>
+                    </li>
+                    <li class="nav-item">
+                        <h4>
+                            <a class="nav-link m-5 border-bottom border-dark border-2" href="{{ path('contact') }}">Contact</a>
+                        </h4>
+                    </li>
+                    <li class="nav-item">
+                        <img style="margin-left: 190px; margin-right: 400px; height: 150px; width: 150px;" class="img-fluid " src="{{ asset('img/pizza_logo.png') }}">
+                    </li>
+                    <li class="nav-item">
+                        <h4>
+                            <a class="nav-link m-5 float-end border-bottom border-dark border-2" href="{{ path('login') }}">Login</a>
+                        </h4>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <br>
+        <br>
+        <div class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col">
+                    <h4>Tinwerf 16<br>
+                        2544 ED Den Haag<br>
+                        088 6663600<br>
+                        info@rocmondriaan.nl</h4>
+                </div>
+                <div class="col">
+                    <div style="width: 100%">
+                        <iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=tinwerf%2016+(Rocmondriaan)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                            <a href="https://www.gps.ie/sport-gps/">fitness tracker</a>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-center" style="margin-top: 350px">
+            <h5>Afdeling Software Development, Tinwerf 16, Den Haag</h5>
+        </div>
+    </div>
+{% endblock %}
