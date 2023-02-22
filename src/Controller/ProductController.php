@@ -4,19 +4,13 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use Doctrine\Persistence\ManagerRegistry;
-use http\Client\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+//use http\Client\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 class  ProductController extends AbstractController
 {
-    #[Route('/product', name: 'app_product')]
-    public function index(): Response
-    {
-        return $this->render('product/index.html.twig', [
-            'controller_name' => 'ProductController',
-        ]);
-    }
-
     #[Route('/products', name: 'products_name')]
     public function showProducts(ManagerRegistry $doctrine):response {
         $products=$doctrine->getRepository(Product::class)->findAll();
