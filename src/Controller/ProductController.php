@@ -12,12 +12,12 @@ use Symfony\Component\HttpFoundation\Response;
 class  ProductController extends AbstractController
 {
     #[Route('/products', name: 'products_name')]
-    public function showProducts(ManagerRegistry $doctrine):response {
+    public function showProducts(ManagerRegistry $doctrine): Response
+    {
         $products=$doctrine->getRepository(Product::class)->findAll();
         return $this->render('bezoeker/products.html.twig',['products'=>$products
         ]);
     }
-
     #[Route('/product', name: 'create_product')]
     public function createProduct(ManagerRegistry $doctrine): Response
     {
