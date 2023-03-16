@@ -1,0 +1,57 @@
+Vegetarische Pizza's
+img/veggi_pizza.png
+Vind hier alle Vegetarische pizza's die we hebben.
+width: 18rem; background: rgb(159,232,140);background: linear-gradient(90deg, rgba(159,232,140,1) 0%, rgb(58,154,31) 100%);
+
+Vlees Pizza's
+img/vlees_pizza.png
+Vind hier alle vlees pizza's die we hebben.
+width: 18rem; background: rgb(232,140,140);background: linear-gradient(90deg, rgba(232,140,140,1) 0%, rgb(217,80,80) 100%);
+
+Vis Pizza's
+img/vis_pizza.png
+Vind hier alle Vis pizza's die we hebben.
+width: 18rem; background: rgb(154,153,194); background: linear-gradient(90deg, rgb(8,198,241) 0%, rgb(145,137,229) 100%);
+
+
+BBQ Bacon & Chicken
+15
+BBQ-saus, mozzarella, rode ui, paprika, chicken, bacon (100% kip) swirl van bbq saus en knoflookolie op de rand.
+img/vlees_pizza.png
+2
+
+BBQ Meatlovers pizza
+15
+BBQ saus, chorizo, ham (kalkoen), pepperoni, mozzarella, peterselie en knoflookolie op de rand.
+img/vleesp1.png
+2
+
+Pulled Chicken
+15
+Tomatensaus, mozzarella, rode ui, paprika, natural chicken en knoflookolie op de rand.
+img/vleesp2.png
+2
+
+Caprese pizza
+16
+Tomatensaus, mozzarella, cherry tomaat, buffel mozzarella, swirl van pesto en knoflookolie op de rand.
+img/veggi_pizza.png
+1
+
+Margherita pizza
+11
+Tomatensaus, mozzarella en met knoflookolie op de rand van de pizza. Tip! Ook lekker met oregano.
+img/vegip1.png
+1
+
+Zwarte Truffel pizza
+16
+Tomatensaus, mozzarella, champignons, parmezaan flakes, truffeltapenade, peterselie en knoflookolie op de rand.
+img/vegip2.png
+1
+
+Tuna Treat pizza
+15
+Tomatensaus, mozzarella, pole & line tonijn, groene olijven, rode ui en knoflookolie op de rand.
+img/vis_pizza.png
+3

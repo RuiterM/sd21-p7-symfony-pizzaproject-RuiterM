@@ -26,8 +26,8 @@ class HomeController extends AbstractController
     {
         return $this->render('bezoeker/login.html.twig');
     }
-    #[Route('products', name: "products")]
-    public function products(ManagerRegistry $doctrine): Response
+    #[Route('category/{id}', name: "products")]
+    public function products(ManagerRegistry $doctrine, int $id): Response
     {
         $products=$doctrine->getRepository(Product::class)->findAll();
         return $this->render('bezoeker/products.html.twig',['products'=>$products]);

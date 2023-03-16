@@ -49,7 +49,7 @@
                         <div class="card-body">
                             <h5 class="card-title text-light">{{ category.name}}</h5>
                             <p class="card-text text-light">{{ category.description}}</p>
-                            <a href="" class="btn text-light" style="background: black">Bestellen</a>
+                            <a href="{{ path('products',{id:category.id}) }}" class="btn text-light" style="background: black">Bestellen</a>
                         </div>
                     </div>
                 </div>
