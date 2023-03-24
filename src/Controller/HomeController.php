@@ -2,7 +2,10 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Orders;
 use App\Entity\Product;
+use App\Entity\Accounts;
+use App\Form\OrderType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -24,12 +27,25 @@ class HomeController extends AbstractController
     #[Route('login', name: "login")]
     public function login(): Response
     {
-        return $this->render('bezoeker/login.html.twig');
+        $Accounts=new Accounts();
+        $form=$this->createForm(InlogType::class,$Accounts);
+        return $this->renderForm('bezoeker/login.html.twig', ['inlogform'=>$form,]);
     }
     #[Route('category/{id}', name: "products")]
     public function products(ManagerRegistry $doctrine, int $id): Response
     {
-        $products=$doctrine->getRepository(Product::class)->findAll();
-        return $this->render('bezoeker/products.html.twig',['products'=>$products]);
+        $category=$doctrine->getRepository(Category::class)->find($id);
+        return $this->render('bezoeker/products.html.twig',['category'=>$category]);
+    }
+
+    #[Route('bestel/{id}', name: "bestel")]
+    public function bestel(ManagerRegistry $doctrine, int $id): Response
+    {
+        $pizza=$doctrine->getRepository(Product::class)->find($id);
+        $order=new Orders();
+        $form=$this->createForm(OrderType::class,$order);
+        $product=$doctrine->getRepository(Product::class)->find($id);
+
+        return $this->renderForm('bezoeker/bestel.html.twig', ['orderForm' => $form,'product'=>$product]);
     }
 }

@@ -30,22 +30,8 @@
         </nav>
         <br>
         <br>
-        <div class="d-flex justify-content-center">
-            <div class="row">
-                {% for product in category.products %}
-                    <div class="col">
-                        <div class="card" style="{{ category.style }}">
-                            <img src="{{ asset(product.img) }}" alt="no picture" class="card-img-top">
-                            <div class="card-body">
-                                <h5 class="card-title text-light">{{ product.name}}</h5>
-                                <p class="card-text text-light">{{ product.description}}</p>
-                                <a href="{{ path('bestel',{id:product.id}) }}" class="btn text-light" style="background: black">Bestellen</a>
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
+        {{ form(orderForm) }}
+    <div class="container">
         <div class="d-flex justify-content-center" style="margin-top: 350px">
             <h5>Afdeling Software Development, Tinwerf 16, Den Haag</h5>
         </div>
