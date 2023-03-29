@@ -5,6 +5,7 @@ use App\Entity\Category;
 use App\Entity\Orders;
 use App\Entity\Product;
 use App\Entity\Accounts;
+use App\Form\InlogType;
 use App\Form\OrderType;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,7 +30,7 @@ class HomeController extends AbstractController
     {
         $Accounts=new Accounts();
         $form=$this->createForm(InlogType::class,$Accounts);
-        return $this->renderForm('bezoeker/login.html.twig', ['inlogform'=>$form,]);
+        return $this->renderForm('bezoeker/login.html.twig', ['inlogform'=>$form]);
     }
     #[Route('category/{id}', name: "products")]
     public function products(ManagerRegistry $doctrine, int $id): Response
@@ -41,7 +42,6 @@ class HomeController extends AbstractController
     #[Route('bestel/{id}', name: "bestel")]
     public function bestel(ManagerRegistry $doctrine, int $id): Response
     {
-        $pizza=$doctrine->getRepository(Product::class)->find($id);
         $order=new Orders();
         $form=$this->createForm(OrderType::class,$order);
         $product=$doctrine->getRepository(Product::class)->find($id);
